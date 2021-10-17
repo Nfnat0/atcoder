@@ -1,10 +1,9 @@
 import sys
 
 
-def main():
+def main(arg):
     """引数を一つ取る"""
-    args = sys.argv[1]
-    S = args[::-1]
+    S = arg[::-1]
 
     values = ['dream', 'dreamer', 'erase', 'eraser']
 
@@ -23,8 +22,8 @@ def main():
             can1 = False
             break
 
-    print("YES" if can1 else "NO")
+    return("YES" if can1 else "NO")
 
 
 if __name__ == '__main__':
-    main()
+    main(sys.argv[1])
